@@ -1,7 +1,18 @@
 import React from 'react';
+import factory from '../ethereum/factory';
 
-const NewCampaign = () => {
-    return ( <h1>NewCampaign</h1> );
+class CampaignIndex extends Component {
+    state = {  }
+    
+    async componentDidMount(){
+        const campaigns = await factory.methods.getDeployedCamplaigns().call();
+
+        console.log(campaigns);
+    }
+
+    render(){
+        return <div>Campaigns index</div>
+    }
 }
  
-export default NewCampaign;
+export default CampaignIndex;
