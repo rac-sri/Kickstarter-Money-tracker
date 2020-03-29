@@ -12,7 +12,6 @@ class CampaignIndex extends Component {
   }
 
   renderCampaigns() {
-    console.log(this.props);
     const items = this.props.campaigns.map(address => {
       return {
         header: address,
